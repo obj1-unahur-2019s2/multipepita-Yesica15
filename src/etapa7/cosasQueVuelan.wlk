@@ -6,6 +6,10 @@
 // import masAves.pepon
 // import masAve.pipa
 
+import roque.*
+import pepita.*
+import masAves.*
+
 object helicopteroFeo {
   var kmDesdeUltimoService = 0
   const frecuenciaServiceKm = 1000
@@ -13,6 +17,8 @@ object helicopteroFeo {
   method volar(km) { kmDesdeUltimoService += km }
   method requiereService() { return kmDesdeUltimoService >= frecuenciaServiceKm } 
   method registarService() { kmDesdeUltimoService = 0 }
+  method comer(cosa, cuanto) {}
+  method haceLoQueQuieras() {}
 }
 
 
@@ -29,6 +35,7 @@ object pepucha {
     }
     cuantoComioDesdeUltimoVuelo = 0
   }
-  method comer(gramos) { cuantoComioDesdeUltimoVuelo += gramos }
+  method comer(cosa, gramos) { cuantoComioDesdeUltimoVuelo += gramos }
   method esBienTratada() { return kmVoladosConPilas >= kmVoladosSinPilas }
+  method haceLoQueQuieras() {}
 }

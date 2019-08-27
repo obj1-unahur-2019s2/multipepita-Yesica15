@@ -1,20 +1,18 @@
-/*
- * Traer, e importar, los objetos de la etapa 4.
- */
 import masAves.*
 import comidas.*
 import pepita.*
-import roque.*
 
-object susana {
+object roque {
 	var pupilo = pepita
 	
 	method tuPupiloEs(ave){ pupilo = ave}
 	
 	method entrenar() {
-		pupilo.comer(alpiste, 100)
-		pupilo.volar(20)
-	}  
+		pupilo.volar(10)
+		pupilo.comer(alpiste, 300)
+		pupilo.volar(5)
+		pupilo.haceLoQueQuieras()
+	} 
 	
 	method pupiloActual(){return pupilo}
-}  // implementar
+}

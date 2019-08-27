@@ -6,7 +6,9 @@ object pepon {
 	method volar(kms){ energia -= ((kms*0.5)+1)}
 	method haceLoQueQuieras(){ self.volar(1)}
 	method comer(cosa, cuanto){ energia += (cosa.energiaPorGramo()*cuanto*0.5)}
-	   
+	method puedeVolar(unosKms){
+		return energia >= (1+(unosKms*0.5))
+	}   
 }// implementar
 
 // implementar el objeto entero, salvo haceLoQueQuieras que lo damos hecho
@@ -25,4 +27,7 @@ object pipa {
 	 */
 	method haceLoQueQuieras() { }   // queda asi
 	// pregunta: ¿por qué es necesario agregar este método, sin código
+	method puedeVolar(unosKms){
+		return true
+	}
 }
