@@ -3,16 +3,31 @@ import comidas.*
 import pepita.*
 
 object roque {
-	var pupilo = pepita
+	var pupilos = []
 	
-	method tuPupiloEs(ave){ pupilo = ave}
+	method agregarPupilo(unAve){
+		pupilos.add(unAve)
+	}
+	method dejarPupilo(unAve){
+		pupilos.remove(unAve)
+	}
+	method pupilosCapacesDeVolar(unosKms){
+		pupilos.filter( {ave => ave.puedeVolar(unosKms)})
+	}
 	
-	method entrenar() {
+	method rutina(pupilo){
 		pupilo.volar(10)
 		pupilo.comer(alpiste, 300)
 		pupilo.volar(5)
 		pupilo.haceLoQueQuieras()
+	}
+	method entrenar() {
+		pupilos.forEach({ave => self.rutina(ave)})
 	} 
 	
-	method pupiloActual(){return pupilo}
+	method estaFeliz(){return pupilos.size().between(2,8) }
+	
+	method pupiloActual(){return pupilos}
+	
+	method mejorEstudiante(){ return pupilos.find({ ave => ave.puedeVolar(10)})}
 }

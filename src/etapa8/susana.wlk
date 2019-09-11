@@ -17,4 +17,8 @@ object susana {
 	}  
 	
 	method pupiloActual(){return pupilo}
+	
+	method estaFeliz(){return pupilo.puedeVolar(5)}
+	
+	method mejorEstudiante(){return pupilo}
 }  // implementar
