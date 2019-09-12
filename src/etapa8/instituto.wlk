@@ -11,7 +11,7 @@ object instituto {
 	method buenAmbiente(){return entrenadores.all({ maestro => maestro.estaFeliz()})}
 	method mejoresEstudiantes(){ 
 		var listaMejores = []
-		listaMejores.add(entrenadores.forEach({maestro => maestro.mejorEstudiante()}))
+		entrenadores.forEach({maestro => listaMejores.add(maestro.mejorEstudiante())})
 		return listaMejores
 	}
 }  // implementar
